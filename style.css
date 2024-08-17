@@ -58,8 +58,10 @@ body{
     --font-size-header-desktop: 24px;
     --font-size-p-desktop: 22px;
 }
+/*
+* HEADER
+*/
 
-/*Header*/
 #header{
     width: 100%;
     min-width: 300px;
@@ -83,6 +85,7 @@ body{
     filter: drop-shadow(0 0 5px black);
 }
 
+
 @media screen and (min-width: 768px ) and (max-width:1024px) {
 
     #header{
@@ -98,6 +101,25 @@ body{
 }
 
 
+@media screen and (min-width: 1024px) {
+
+    #header{
+        max-width: 100%;
+    }
+
+    #navegacion{
+        width: 70%;
+        max-width: 80%;
+       display: flex;
+       justify-content: space-between;
+    }
+
+    #navegacion .jam.jam-menu{
+        display: none;
+    }
+}
+
+
 #menu{
     background-color: var(--primary-bg-color);
     position: absolute;
@@ -110,11 +132,40 @@ body{
     transition: transform .5s ease-in;
 }
 
+
 @media screen and  (min-width: 768px ) and (max-width:1024px){
     
     #menu{
-        top: calc( 5px + var(--height-header-tablet));
         width: 150px;
+        top: calc( 5px + var(--height-header-tablet));
+        font-size: var(--font-size-header-tablet);
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    #menu{
+        width: 100%;
+        position: static;
+        transform: translateX(0);
+        border: none;
+        box-shadow: none;
+        display: flex;
+        justify-content: space-around;
+
+
+    }
+
+    #list{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .item{
+        border: none;
     }
 }
 
@@ -138,10 +189,13 @@ body{
 }
 
 
-
-
-
 @media screen and (min-width: 1024px) {
 
-  
+    #menu #list .item{
+        border-bottom: none;
+    }
+
 }
+
+
+
