@@ -10,7 +10,7 @@
 }
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: var(--main-font) ;
     background-color: var(--primary-bg-color);
     position: relative;
@@ -23,7 +23,9 @@ body{
     --second-font: 'Merriweather';
 
     /*VARRABLES PARA CAJA*/
-    --padding: 0 15px;
+    --padding-mobile: 0 15px;
+    --padding-tablet: 0 20px;
+    --padding-desktop: 0 30px;
 
 
     /*TAMAÑOS DE CAJAS*/
@@ -49,7 +51,7 @@ body{
     --font-size-h1-mobile:32px;
     --font-size-h2-mobile: 20px;
     --font-size-header-mobile: 20px;
-    --font-size-p-mobile: 11px;
+    --font-size-p-mobile: 13px;
 
     /*Tablets*/
     --font-size-h1-tablet: 48px;
@@ -82,7 +84,7 @@ body{
     width: 100%;
     min-width: 300px;
     height: 36px;
-    padding: var(--padding);
+    padding: var(--padding-mobile);
     border-bottom: var(--border);
     color: var(--primary-color);
     display: flex;
@@ -164,6 +166,7 @@ a:visited{
         max-width: 100%;
         height: var(--height-header-tablet);
         font-size: var(--font-size-header-tablet);
+        padding: var(--padding-tablet);
     }
 
     #navegacion .jam{
@@ -185,6 +188,7 @@ a:visited{
     #header{
         max-width: 100%;
         height: var(--height-header-desktop);
+        padding: var(--padding-desktop);
     }
 
     #navegacion{
@@ -232,11 +236,67 @@ a:visited{
 
 /*MOBILE*/
 
+#main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+#my-description{
+    width: 70%;
+    min-width: 250px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+#title{
+    font-size: var(--font-size-h1-mobile);
+}
+
+#subtitle{
+    font-size: var(--font-size-p-mobile);
+    font-weight: normal;
+    text-align: center;
+}
+
+#me{
+    display: inline-block;
+    max-width: 70%;
+    height: 400px ;
+    filter: drop-shadow(0 0 30px var(--night-mode-bg-color));
+}
 
 
 /*TABLET*/
 
 @media screen and (min-width: 768px ) and (max-width:1024px){
+
+    #main{
+        height: 90vh;
+    }
+
+    #my-description{
+        width: 50%;
+    }
+
+    #title{
+        font-size: var(--font-size-h1-tablet);
+    }
+
+    #subtitle{
+        font-size: var(--font-size-p-tablet);
+    }
+
+    #me{
+        height: 70%;
+    }
 
 }
 
@@ -244,6 +304,30 @@ a:visited{
 
 @media screen and (min-width: 1024px){
 
+    #main{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #my-description{
+        width: 40%;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    #title{
+        font-size: var(--font-size-h1-desktop);
+    }
+
+    #subtitle{
+        font-size: var(--font-size-p-desktop);
+        text-align: start;
+    }
+
+    #me{
+        height: 80%;
+        width: 500px;
+    }
 }
 
 
