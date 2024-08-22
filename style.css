@@ -443,8 +443,11 @@ a:visited{
 .cards{
     overflow: hidden;
     width: 60%;
-    height: 300px;
-    background-color: rebeccapurple;
+    max-width: 300px;
+    height: 250px;
+    position: relative;
+    border: 3px solid var(--primary-color);
+
 }
 
 .cards > a{
@@ -461,23 +464,29 @@ a:visited{
     width: inherit;
     height: inherit;
     position: relative;
-    display: none;
     z-index: 0;
 }
 
 .name-project{
-    position: relative;
+    position: absolute;
     z-index: 1;
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-family: var(--second-font);
     font-size: var(--font-size-p-mobile);
-    background-image: linear-gradient(to top, var(--special-color), var(--night-mode-bg-color));
+    background-color: rgba(20, 15, 238, 0.8); 
     color: var(--night-mode-color);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .2s ease-in;
+}
+
+.cards:hover .name-project{
+    transform: scaleY(1);
 }
 
 .name-project h4{
@@ -489,9 +498,32 @@ a:visited{
 /*TABLET*/
 @media screen and (min-width: 768px ) and (max-width:1024px){
 
+    #cards-container{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 700px;
+        padding: var(--padding-tablet);
+    }
+
+    .cards{
+        min-width: 40%;
+        height: 300px;
+    }
 }
 
 /*DESKTOP*/
 @media screen and (min-width: 1024px){
 
+    #cards-container{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 400px;
+        padding: var(--padding-desktop);
+    }
+
+    .cards{
+        height: 300px;
+        max-width: 400px;
+    }
 }
