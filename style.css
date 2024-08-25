@@ -540,24 +540,63 @@ a:visited{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 400px;
+    height: 300px;
     padding: var(--padding-mobile);
 }
 
-#carrusel{
-    min-width: 300px;
+#carrusel {
     width: 90%;
-    background-color: red;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid var(--special-color);
 }
 
-.cont-img{
-
+.track {
+    display: flex;
+    width: calc(200% + 20px); 
+    animation: carrusel 20s linear infinite;
 }
 
-.skill{
+.group {
+    display: flex;
+    justify-content: space-around;
+    width: 50%; 
+}
+
+.cont-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 10px;
+    border: 5px solid var(--primary-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+
+@keyframes carrusel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.cont-img:hover {
+    transform: scale(1.2);
+}
+
+.skill {
     display: block;
-
+    width: 80%;
+    height: 80%;
 }
+
 
 
 /*TABLET*/
