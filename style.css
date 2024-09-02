@@ -296,7 +296,7 @@ a:visited{
         font-size: var(--font-size-h1-tablet);
     }
 
-    #subtitle{
+    .subtitle{
         font-size: var(--font-size-p-tablet);
     }
 
@@ -325,7 +325,7 @@ a:visited{
         font-size: var(--font-size-h1-desktop);
     }
 
-    #subtitle{
+    .subtitle{
         font-size: var(--font-size-p-desktop);
         text-align: start;
     }
@@ -391,7 +391,8 @@ a:visited{
     .name-section{
         font-size: var(--font-size-h2-tablet);
     }
-    #description{
+
+    .description{
         font-size: var(--font-size-p-tablet);
         width: 90%;
     }
@@ -410,7 +411,7 @@ a:visited{
         font-size: var(--font-size-h2-desktop);
     }
 
-    #description{
+    .description{
         font-size: var(--font-size-p-desktop);
         width: 90%;
     }
@@ -533,6 +534,7 @@ a:visited{
 *MIS HABILIDADES
 */
 /*MOBILE*/
+
 #my-skills{
     margin: var(--margin);
     display: flex;
@@ -664,6 +666,7 @@ a:visited{
 /*MOBILE*/
 
 #contact{
+    margin: var(--margin);
     display: flex;
     flex-direction: column;
     align-items: center;
