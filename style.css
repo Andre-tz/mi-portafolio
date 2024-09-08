@@ -61,15 +61,15 @@ body{
 
     /*Tablets*/
     --font-size-h1-tablet: 48px;
-    --font-size-h2-tablet: 36px;
+    --font-size-h2-tablet: 32px;
     --font-size-header-tablet: 20px;
     --font-size-p-tablet: 15px;
 
     /*Desktop*/
     --font-size-h1-desktop: 64px;
-    --font-size-h2-desktop: 48px;
+    --font-size-h2-desktop: 40px;
     --font-size-header-desktop: 24px;
-    --font-size-p-desktop: 22px;
+    --font-size-p-desktop: 20px;
 }
 
 /*
@@ -670,6 +670,11 @@ a:visited{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #contact .name-section{
@@ -717,6 +722,10 @@ a:visited{
 /*TABLET*/
 @media screen and (min-width: 768px ) and (max-width:1024px){
 
+    #contact{
+        height: 450px;
+    }
+
     #contact-me{
         margin: 25px 0;
         height: 60px;
@@ -738,6 +747,9 @@ a:visited{
 /*DESKTOP*/
 @media screen and (min-width: 1024px){
 
+    #contact{
+        height: 500px;
+    }
     #contact-me{
         font-size: var(--font-size-header-desktop);
         width: 280px;
@@ -750,5 +762,43 @@ a:visited{
 
     .fa-brands{
         font-size: 30px;
+    }
+}
+
+
+/*
+*FOOTER
+*/
+
+/*MOBILE*/
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: var(--border);
+    height: 50px;
+}
+#footer .line{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+}
+
+/*TABLET*/
+@media screen and (min-width: 768px ) and (max-width:1024px){
+    
+    #footer .line{
+        font-size: .8rem;
+    }
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px){
+
+    #footer .line{
+        font-size: .9rem;
     }
 }
