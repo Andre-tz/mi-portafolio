@@ -552,7 +552,7 @@ a:visited{
     align-items: center;
     overflow: hidden;
     position: relative;
-    border: 5px solid var(--special-color);
+    /* border: 5px solid var(--special-color); */
 }
 
 .track {
