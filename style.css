@@ -31,7 +31,7 @@
     --primary-color:#333;
     --primary-bg-color: #f5f5f5;
     --border: 1px solid #000;
-    --drop-shadow: 0 0 50px  var(--night-mode-bg-color) ;
+    --drop-shadow: 0 0 35px  var(--night-mode-bg-color) ;
     --shadow-icon: 0 0 5px var(--night-mode-bg-color);
     --special-color: #140fee;
     
@@ -40,7 +40,7 @@
     --night-mode-color:#ffffff;
     --night-mode-bg-color: #000000;
     --night-mode-border: 1px solid #333;
-    --drop-shadow-night-mode: 0 0 50px var(--primary-bg-color);
+    --drop-shadow-night-mode: 0 0 35px var(--primary-bg-color);
     --shadow-icon-night-mode: 0 0 5px var(var(--primary-bg-color));
     --special-color-night: #3a0bff;
 
@@ -75,23 +75,10 @@ body{
     color: var(--primary-color);
     position: relative;
     transition: all .5s;
-    transform: translateY(-40px);
-    opacity: 0;
-    animation: opacidad 2s forwards;
+ 
 }
 
-@keyframes opacidad {
 
-    from{
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
 
 body.night-mode{
     --primary-color: var( --night-mode-color);
@@ -164,7 +151,7 @@ a:visited{
     top: calc( 5px + var(--height-header-mobile));
     right: 10px;
     border: var(--border);
-    width: 140px;
+    width: 180px;
     box-shadow: 0 0 10px  0px var(--night-mode-bg-color);
     transform: translateX(200px);
     transition: transform .5s ease-in;
@@ -180,8 +167,18 @@ a:visited{
     list-style: none;
     font-size: var(--font-size-header-mobile);
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
 }
 
+.item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
 #list .item:not(:last-child){
     border-bottom: var(--border);
 }
@@ -209,11 +206,15 @@ a:visited{
     }
 
     #menu{
-        width: 150px;
+        width: 250px;
         top: calc( 5px + var(--height-header-tablet));
         font-size: var(--font-size-header-tablet);
+        transform: translate(280px);
     }
 
+    #menu #list{
+        height: 350px;
+    }    
 }
 
 /*DESKTOP*/
@@ -245,14 +246,15 @@ a:visited{
         box-shadow: none;
         display: flex;
         justify-content: space-around;
-        background-color: inherit;
-
     }
 
-    #list{
+    #menu #list{
         width: 100%;
+        height: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
+        align-items: center;
     }
 
     .item{
@@ -279,8 +281,23 @@ a:visited{
     align-items: center;
     height: 80vh;
     position: relative;
+    transform: translateY(-40px);
+    opacity: 0;
+    animation: opacidad 2s forwards;
 }
 
+@keyframes opacidad {
+
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 #my-description{
     width: 70%;
     min-width: 250px;
@@ -290,10 +307,12 @@ a:visited{
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 #title{
     font-size: var(--font-size-h1-mobile);
+    text-align: center;
 }
 
 .subtitle{
@@ -306,7 +325,15 @@ a:visited{
     display: inline-block;
     max-width: 70%;
     height: 400px ;
-    filter: drop-shadow(var(--drop-shadow));
+    border-radius: 40px;
+    filter: drop-shadow(var(--drop-shadow) );  
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform .5s;
+}
+
+#me:hover{
+    transform: scale(1.05);
 }
 
 
@@ -331,7 +358,8 @@ a:visited{
     }
 
     #me{
-        height: 70%;
+        height: 60%;
+        width: 400px ;
     }
 
 }
@@ -353,6 +381,7 @@ a:visited{
 
     #title{
         font-size: var(--font-size-h1-desktop);
+        text-align: start;
     }
 
     .subtitle{
@@ -361,8 +390,8 @@ a:visited{
     }
 
     #me{
-        height: 80%;
-        width: 500px;
+        height: 450px;
+        width: 450px;
     }
 }
 
