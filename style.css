@@ -114,13 +114,18 @@ body.night-mode{
     align-items: center;
 }
 
-#navegacion .jam{
+#navegacion{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+#navegacion .icono{
     font-size: var(--font-size-h1-mobile);
-    display: inline-block;
     cursor: pointer;
+
 }
 
-.jam-menu:hover, .jam-moon:hover{
+.icono:hover{
     filter: drop-shadow(var(--shadow-icon));
 }
 
@@ -201,7 +206,7 @@ a:visited{
         padding: var(--padding-tablet);
     }
 
-    #navegacion .jam{
+    #navegacion .icono{
         font-size: var(--font-size-h2-tablet);
     }
 
@@ -234,7 +239,7 @@ a:visited{
        justify-content: space-between;
     }
 
-    #navegacion .jam.jam-menu{
+    #navegacion #btn-menu{
         display: none;
     }
 
@@ -298,6 +303,7 @@ a:visited{
         transform: translateY(0px);
     }
 }
+
 #my-description{
     width: 70%;
     min-width: 250px;
@@ -323,7 +329,9 @@ a:visited{
 
 #me{
     display: inline-block;
-    max-width: 70%;
+    width: 70%;
+    min-width: 300px;
+    max-width: 350px;
     height: 400px ;
     border-radius: 40px;
     filter: drop-shadow(var(--drop-shadow) );  
@@ -391,7 +399,7 @@ a:visited{
 
     #me{
         height: 450px;
-        width: 450px;
+        min-width: 400px;
     }
 }
 
@@ -543,6 +551,7 @@ a:visited{
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform .2s ease-in;
+    padding: 15px;
 }
 
 .cards:hover .name-project{
