@@ -31,7 +31,7 @@
     --primary-color:#333;
     --primary-bg-color: #f5f5f5;
     --border: 1px solid #000;
-    --drop-shadow: 0 0 35px  var(--night-mode-bg-color) ;
+    --drop-shadow: 0 0 15px  var(--night-mode-bg-color) ;
     --shadow-icon: 0 0 5px var(--night-mode-bg-color);
     --special-color: #140fee;
     
@@ -40,7 +40,7 @@
     --night-mode-color:#ffffff;
     --night-mode-bg-color: #000000;
     --night-mode-border: 1px solid #333;
-    --drop-shadow-night-mode: 0 0 35px var(--primary-bg-color);
+    --drop-shadow-night-mode: 0 0 15px var(--primary-bg-color);
     --shadow-icon-night-mode: 0 0 5px var(var(--primary-bg-color));
     --special-color-night: #3a0bff;
 
